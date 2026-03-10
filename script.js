@@ -235,28 +235,31 @@ if(sim2) sim2.onclick = explosao
 
 function animarNome(){
 
-const nome = "Ludy Kellen"
-let i = 0
+const nome="Ludy Kellen..."
 
-const escrever = setInterval(()=>{
+let i=0
 
-nomeAnimado.innerHTML += nome[i]
+nomeAnimado.style.opacity=1
+
+const escrever=setInterval(()=>{
+
+nomeAnimado.innerHTML+=nome[i]
 
 i++
 
-if(i === nome.length){
+if(i===nome.length){
 
 clearInterval(escrever)
 
 setTimeout(()=>{
 
-perguntaTexto.style.opacity = 1
+perguntaTexto.classList.add("show")
 
-},800)
+},1000)
 
 }
 
-},600)
+},150)
 
 }
 
@@ -285,6 +288,7 @@ t += 0.2
 
 
 }
+
 
 
 
