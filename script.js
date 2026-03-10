@@ -233,15 +233,16 @@ setTimeout(coracao,i*60)
 if(sim) sim.onclick = explosao
 if(sim2) sim2.onclick = explosao
 
+
 function animarNome(){
 
-const nome="Ludy Kellen..."
+const nome = "Ludy Kellen"
 
-let i=0
+let i = 0
 
-nomeAnimado.style.opacity=1
+nomeAnimado.style.opacity = 1
 
-const escrever=setInterval(()=>{
+const escrever = setInterval(()=>{
 
 nomeAnimado.innerHTML += nome[i]
 
@@ -253,9 +254,11 @@ clearInterval(escrever)
 
 setTimeout(()=>{
 
-perguntaTexto.classList.add("show")
+perguntaTexto.style.opacity = 1
 
-},1000)
+explosao()
+
+},800)
 
 }
 
@@ -303,6 +306,7 @@ t += 0.2
 
 
 }
+
 
 
 
