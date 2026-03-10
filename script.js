@@ -266,3 +266,4 @@ setTimeout(coracao,i*60)
 
 }
 
+
