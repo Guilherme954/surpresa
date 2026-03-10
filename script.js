@@ -29,7 +29,6 @@ controls:0
 
 }
 
-
 // criar estrelas
 
 for(let i=0;i<120;i++){
@@ -56,11 +55,11 @@ started=true
 
 startBtn.style.display="none"
 
-prep.style.display="block"
-
 if(player){
 player.playVideo()
 }
+
+prep.style.display="block"
 
 preparacao()
 
@@ -230,3 +229,4 @@ setTimeout(coracao,i*60)
 }
 
 }
+
