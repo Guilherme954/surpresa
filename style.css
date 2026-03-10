@@ -93,10 +93,15 @@ transition:1s;
 #stars{
 
 position:fixed;
-width:100%;
-height:100%;
 top:0;
 left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:100;
 
 }
 
@@ -174,18 +179,24 @@ margin:25px auto 0 auto;
 #pedidoTela{
 
 position:fixed;
-top:0;
-left:0;
-
-width:100%;
-height:100%;
+inset:0;
 
 display:none;
-
 align-items:center;
 justify-content:center;
 
 background:radial-gradient(circle,#200020,#000);
+
+z-index:500;
+
+}
+
+.pedido-centro{
+
+position:relative;
+z-index:600;
+
+text-align:center;
 
 }
 
@@ -194,3 +205,4 @@ background:radial-gradient(circle,#200020,#000);
 display:flex;
 
 }
+
