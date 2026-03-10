@@ -150,9 +150,9 @@ setTimeout(()=>{
 
 fade.classList.remove("show")
 
-document.querySelector(".container").style.display="none"
+document.querySelector(".container").style.display = "none"
 
-pedidoTela.style.display="flex"
+pedidoTela.classList.add("show")
 
 animarNome()
 
@@ -265,3 +265,4 @@ setTimeout(coracao,i*60)
 }
 
 }
+
