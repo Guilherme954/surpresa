@@ -8,7 +8,7 @@ const nomeAnimado = document.getElementById("nomeAnimado")
 const perguntaTexto = document.getElementById("perguntaTexto")
 
 let player
-let started=false
+let started = false
 
 
 function onYouTubeIframeAPIReady(){
@@ -29,7 +29,9 @@ controls:0
 
 }
 
-// criar estrelas
+
+
+// ⭐ CRIAR ESTRELAS
 
 for(let i=0;i<120;i++){
 
@@ -45,7 +47,8 @@ stars.appendChild(star)
 }
 
 
-// iniciar
+
+// 🚀 INICIAR EXPERIÊNCIA
 
 startBtn.onclick=()=>{
 
@@ -107,7 +110,7 @@ mostrar()
 
 
 
-// contagem
+// ⏱️ CONTAGEM REGRESSIVA
 
 function iniciarContagem(){
 
@@ -147,7 +150,9 @@ setTimeout(()=>{
 
 fade.classList.remove("show")
 
-pedidoTela.style.display="block"
+document.querySelector(".container").style.display="none"
+
+pedidoTela.style.display="flex"
 
 animarNome()
 
@@ -161,7 +166,7 @@ animarNome()
 
 
 
-// nome aparecendo
+// ✨ NOME APARECENDO
 
 function animarNome(){
 
@@ -185,6 +190,8 @@ setTimeout(()=>{
 
 perguntaTexto.style.opacity = 1
 
+formarCoracao()
+
 explosao()
 
 },800)
@@ -197,7 +204,36 @@ explosao()
 
 
 
-// explosão de corações
+// ❤️ FORMAR CORAÇÃO COM AS ESTRELAS
+
+function formarCoracao(){
+
+const estrelas = document.querySelectorAll(".star")
+
+let t = 0
+
+estrelas.forEach(star=>{
+
+const x = 70 * Math.pow(Math.sin(t),3)
+
+const y =
+55 * Math.cos(t)
+-25 * Math.cos(2*t)
+-10 * Math.cos(3*t)
+-5 * Math.cos(4*t)
+
+star.style.left = (50 + x) + "vw"
+star.style.top = (45 - y) + "vh"
+
+t += 0.2
+
+})
+
+}
+
+
+
+// 💖 EXPLOSÃO DE CORAÇÕES
 
 function coracao(){
 
@@ -229,4 +265,3 @@ setTimeout(coracao,i*60)
 }
 
 }
-
