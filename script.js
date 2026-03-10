@@ -235,7 +235,7 @@ if(sim2) sim2.onclick = explosao
 
 function animarNome(){
 
-const nome="Ludy Kellen...<br>"
+const nome="Ludy Kellen..."
 
 let i=0
 
@@ -243,13 +243,16 @@ nomeAnimado.style.opacity=1
 
 const escrever=setInterval(()=>{
 
-nomeAnimado.innerHTML+=nome[i]
+nomeAnimado.innerHTML += nome[i]
 
 i++
 
-if(i===nome.length){
+if(i === nome.length){
 
 clearInterval(escrever)
+
+// quebra de linha depois que terminar
+nomeAnimado.innerHTML += "<br>"
 
 setTimeout(()=>{
 
@@ -288,6 +291,7 @@ t += 0.2
 
 
 }
+
 
 
 
