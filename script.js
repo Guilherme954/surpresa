@@ -13,6 +13,7 @@ const sim2 = document.getElementById("sim2")
 
 let started=false
 
+let player
 let player;
 
 function onYouTubeIframeAPIReady() {
@@ -25,7 +26,13 @@ width: '0',
 videoId: 'F-cO2CMue4Q',
 
 playerVars: {
+'autoplay': 0,
+'controls': 0,
+'showinfo': 0,
+'rel': 0
+}
 
+})
 autoplay: 0,
 controls: 0,
 rel: 0,
@@ -55,14 +62,23 @@ stars.appendChild(star)
 
 // iniciar
 
+startBtn.onclick=()=>{
 startBtn.onclick = () => {
 
+if(started)return
 if(started) return;
 
+started=true
 started = true;
 
+startBtn.style.display="none"
 startBtn.style.display = "none";
 
+prep.style.display="block"
+    
+ player.playVideo()
+    
+preparacao()
 prep.style.display = "block";
 
 // toca música
@@ -237,37 +253,26 @@ function animarNome(){
 
 const nome = "Ludy Kellen"
 let i = 0
-const nome="Ludy Kellen..."
 
 const escrever = setInterval(()=>{
-let i=0
 
 nomeAnimado.innerHTML += nome[i]
-nomeAnimado.style.opacity=1
-
-const escrever=setInterval(()=>{
-
-nomeAnimado.innerHTML+=nome[i]
 
 i++
 
 if(i === nome.length){
-if(i===nome.length){
 
 clearInterval(escrever)
 
 setTimeout(()=>{
 
 perguntaTexto.style.opacity = 1
-perguntaTexto.classList.add("show")
 
 },800)
-},1000)
 
 }
 
 },600)
-},150)
 
 }
 
@@ -296,6 +301,5 @@ t += 0.2
 
 
 }
-
 
 
