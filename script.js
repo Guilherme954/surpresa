@@ -235,7 +235,7 @@ if(sim2) sim2.onclick = explosao
 
 function animarNome(){
 
-const nome="Ludy Kellen..."
+const nome="Ludy Kellen...<br>"
 
 let i=0
 
@@ -288,6 +288,7 @@ t += 0.2
 
 
 }
+
 
 
 
