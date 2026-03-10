@@ -11,7 +11,6 @@ let player
 let started=false
 
 
-
 function onYouTubeIframeAPIReady(){
 
 player = new YT.Player('player',{
@@ -31,7 +30,6 @@ controls:0
 }
 
 
-
 // criar estrelas
 
 for(let i=0;i<120;i++){
@@ -46,7 +44,6 @@ star.style.top=Math.random()*100+"vh"
 stars.appendChild(star)
 
 }
-
 
 
 // iniciar
@@ -233,4 +230,3 @@ setTimeout(coracao,i*60)
 }
 
 }
-
