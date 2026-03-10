@@ -154,7 +154,7 @@ setTimeout(()=>{
 
 fade.classList.remove("show")
 
-pedidoTela.classList.add("show")
+pedidoTela.style.display = "block"
 
 animarNome()
 
@@ -251,6 +251,18 @@ if(i === nome.length){
 
 clearInterval(escrever)
 
+setTimeout(()=>{
+
+perguntaTexto.classList.add("show")
+
+},1000)
+
+}
+
+},150)
+
+}
+
 // quebra de linha depois que terminar
 nomeAnimado.innerHTML += "<br>"
 
@@ -291,6 +303,7 @@ t += 0.2
 
 
 }
+
 
 
 
