@@ -42,8 +42,9 @@ started=true
 startBtn.style.display="none"
 
 try {
-  musica.play();
-} catch (e) {}
+    musica.volume = 0.7
+    musica.play()
+} catch(e){}
     
 prep.style.display="block"
 
@@ -264,3 +265,4 @@ t += 0.2
 
 
 }
+
