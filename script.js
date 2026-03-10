@@ -13,7 +13,7 @@ const sim2 = document.getElementById("sim2")
 
 let started=false
 
-let player
+let player;
 
 function onYouTubeIframeAPIReady() {
 
@@ -25,16 +25,17 @@ width: '0',
 videoId: 'F-cO2CMue4Q',
 
 playerVars: {
-'autoplay': 0,
-'controls': 0,
-'showinfo': 0,
-'rel': 0
-}
 
-})
+autoplay: 0,
+controls: 0,
+rel: 0,
+showinfo: 0
 
 }
 
+});
+
+}
 
 // criar estrelas animadas
 
@@ -54,19 +55,20 @@ stars.appendChild(star)
 
 // iniciar
 
-startBtn.onclick=()=>{
+startBtn.onclick = () => {
 
-if(started)return
+if(started) return;
 
-started=true
+started = true;
 
-startBtn.style.display="none"
+startBtn.style.display = "none";
 
-prep.style.display="block"
-    
- player.playVideo()
-    
-preparacao()
+prep.style.display = "block";
+
+// toca música
+player.playVideo();
+
+preparacao();
 
 }
 
@@ -283,5 +285,6 @@ t += 0.2
 
 
 }
+
 
 
