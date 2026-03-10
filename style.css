@@ -265,3 +265,38 @@ text-shadow:
 
 }   
 
+
+#nomeAnimado{
+
+font-size:48px;
+margin-bottom:20px;
+
+opacity:0;
+
+transition:1s;
+
+text-shadow:0 0 20px #ff4da6;
+
+}
+
+#perguntaTexto{
+
+font-size:36px;
+
+opacity:0;
+
+transform:scale(0.8);
+
+transition:1s;
+
+text-shadow:0 0 20px #ff4da6;
+
+}
+
+#perguntaTexto.show{
+
+opacity:1;
+
+transform:scale(1);
+
+}
