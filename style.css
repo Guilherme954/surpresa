@@ -1,24 +1,30 @@
 body{
 
 margin:0;
-background:#2b0033;
+min-height:100vh;
+
+background:linear-gradient(#100014,#26002f,#4a0d47);
+
 font-family:Arial;
 color:white;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
 text-align:center;
-overflow:hidden;
+
+overflow-x:hidden;
 
 }
 
 .container{
 
-margin-top:80px;
+max-width:500px;
+width:90%;
 
-}
-
-h1{
-
-font-size:38px;
-text-shadow:0 0 20px #ff4da6;
+margin:auto;
 
 }
 
@@ -26,98 +32,162 @@ text-shadow:0 0 20px #ff4da6;
 
 width:300px;
 border-radius:20px;
-margin-top:30px;
-
-animation:flutuar 4s infinite ease-in-out;
-
-}
-
-@keyframes flutuar{
-
-0%{transform:translateY(0)}
-50%{transform:translateY(-15px)}
-100%{transform:translateY(0)}
 
 }
 
 button{
 
-margin-top:30px;
-padding:15px 30px;
+padding:15px 25px;
 border:none;
 border-radius:30px;
-background:#ff4da6;
-color:white;
-font-size:18px;
+font-size:16px;
 cursor:pointer;
+background:#ff5fa2;
+color:white;
 
-animation:pulse 1.5s infinite;
-
-}
-
-@keyframes pulse{
-
-0%{transform:scale(1)}
-50%{transform:scale(1.1)}
-100%{transform:scale(1)}
+animation:pulse 1.5s infinite alternate;
 
 }
 
 #prep{
 
 display:none;
-margin-top:100px;
 
 }
 
-#pedidoTela{
 
-display:none;
 
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
+/* nome brilhando */
 
-text-align:center;
+.nome-brilho{
+
+animation:brilho 2s infinite alternate;
 
 }
 
-#perguntaTexto{
+@keyframes brilho{
 
-opacity:0;
-transition:1s;
+from{
+
+text-shadow:0 0 5px #ff5fa2;
 
 }
+
+to{
+
+text-shadow:
+0 0 10px #ff5fa2,
+0 0 20px #ff5fa2,
+0 0 40px #ff5fa2;
+
+}
+
+}
+
+
+
+/* botão pulsando */
+
+@keyframes pulse{
+
+from{
+box-shadow:0 0 10px #ff5fa2;
+}
+
+to{
+box-shadow:0 0 30px #ff5fa2;
+}
+
+}
+
+
+
+/* estrelas */
 
 #stars{
 
 position:fixed;
-width:100%;
-height:100%;
 top:0;
 left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+z-index:300;
 
 }
 
 .star{
 
-position:absolute;
-width:2px;
-height:2px;
+position:fixed;
+
+width:4px;
+height:4px;
+
 background:white;
 
+border-radius:50%;
+
+box-shadow:0 0 8px white;
+
+transition:all 2s ease;
+
 }
+
+@keyframes twinkle{
+
+from{opacity:0.2}
+to{opacity:1}
+
+}
+
+
+
+/* tela cinematográfica */
+
+#pedidoTela{
+
+position:fixed;
+inset:0;
+display:none;
+align-items:center;
+justify-content:center;
+background:radial-gradient(circle,#200020,#000);
+z-index:200;
+
+}
+
+#pedidoTela.show{
+
+display:flex;
+
+}
+
+
+
+/* pergunta */
+
+.pergunta{
+
+font-size:40px;
+line-height:1.3;
+
+}
+
+
+/* fade cinema */
 
 #cinemaFade{
 
 position:fixed;
-width:100%;
-height:100%;
+inset:0;
 background:black;
 opacity:0;
 pointer-events:none;
-transition:1s;
+transition:opacity 1s;
+z-index:100;
 
 }
 
@@ -127,34 +197,106 @@ opacity:1;
 
 }
 
-.ring{
 
-font-size:70px;
-margin-bottom:20px;
 
-animation:ring 3s linear infinite;
-
-}
-
-@keyframes ring{
-
-from{transform:rotate(0)}
-to{transform:rotate(360deg)}
-
-}
+/* corações */
 
 .heart{
 
 position:fixed;
 bottom:-20px;
-font-size:20px;
-animation:subir 5s linear;
+font-size:24px;
+animation:subir 6s linear;
 
 }
 
 @keyframes subir{
 
-0%{transform:translateY(0)}
-100%{transform:translateY(-120vh)}
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+/* foto flutuando */
+
+.foto{
+
+width:300px;
+border-radius:20px;
+
+animation:flutuar 6s ease-in-out infinite;
+
+}
+
+@keyframes flutuar{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+#nomeAnimado{
+
+font-size:48px;
+font-weight:bold;
+
+color:#ffb0d2;
+
+text-shadow:
+0 0 10px #ff5fa2,
+0 0 25px #ff5fa2,
+0 0 45px #ff5fa2;
+
+}   
+
+
+#nomeAnimado{
+
+font-size:48px;
+margin-bottom:20px;
+
+opacity:0;
+
+transition:1s;
+
+text-shadow:0 0 20px #ff4da6;
+
+}
+
+#perguntaTexto{
+
+font-size:36px;
+
+opacity:0;
+
+transform:scale(0.8);
+
+transition:1s;
+
+text-shadow:0 0 20px #ff4da6;
+
+}
+
+#perguntaTexto.show{
+
+opacity:1;
+
+transform:scale(1);
 
 }
