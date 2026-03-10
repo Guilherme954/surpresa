@@ -158,3 +158,9 @@ animation:subir 5s linear;
 100%{transform:translateY(-120vh)}
 
 }
+
+#player{
+width:0;
+height:0;
+overflow:hidden;
+}
