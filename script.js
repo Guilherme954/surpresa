@@ -61,7 +61,9 @@ startBtn.style.display="none"
 
 prep.style.display="block"
 
+if(player){
 player.playVideo()
+}
 
 preparacao()
 
@@ -231,3 +233,4 @@ setTimeout(coracao,i*60)
 }
 
 }
+
