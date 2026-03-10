@@ -41,7 +41,9 @@ started=true
 
 startBtn.style.display="none"
 
-musica.play().catch(()=>{})
+try {
+  musica.play();
+} catch (e) {}
     
 prep.style.display="block"
 
@@ -259,5 +261,6 @@ star.style.top = (45 - y) + "vh"
 t += 0.2
 
 })
+
 
 }
