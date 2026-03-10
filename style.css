@@ -9,13 +9,11 @@ overflow:hidden;
 
 }
 
-
 .container{
 
 margin-top:80px;
 
 }
-
 
 h1{
 
@@ -23,7 +21,6 @@ font-size:38px;
 text-shadow:0 0 20px #ff4da6;
 
 }
-
 
 .foto{
 
@@ -35,7 +32,6 @@ animation:flutuar 4s infinite ease-in-out;
 
 }
 
-
 @keyframes flutuar{
 
 0%{transform:translateY(0)}
@@ -43,7 +39,6 @@ animation:flutuar 4s infinite ease-in-out;
 100%{transform:translateY(0)}
 
 }
-
 
 button{
 
@@ -60,7 +55,6 @@ animation:pulse 1.5s infinite;
 
 }
 
-
 @keyframes pulse{
 
 0%{transform:scale(1)}
@@ -69,14 +63,12 @@ animation:pulse 1.5s infinite;
 
 }
 
-
 #prep{
 
 display:none;
 margin-top:100px;
 
 }
-
 
 #pedidoTela{
 
@@ -91,14 +83,12 @@ text-align:center;
 
 }
 
-
 #perguntaTexto{
 
 opacity:0;
 transition:1s;
 
 }
-
 
 #stars{
 
@@ -110,7 +100,6 @@ left:0;
 
 }
 
-
 .star{
 
 position:absolute;
@@ -119,7 +108,6 @@ height:2px;
 background:white;
 
 }
-
 
 #cinemaFade{
 
@@ -133,13 +121,11 @@ transition:1s;
 
 }
 
-
 #cinemaFade.show{
 
 opacity:1;
 
 }
-
 
 .ring{
 
@@ -150,14 +136,12 @@ animation:ring 3s linear infinite;
 
 }
 
-
 @keyframes ring{
 
 from{transform:rotate(0)}
 to{transform:rotate(360deg)}
 
 }
-
 
 .heart{
 
@@ -167,7 +151,6 @@ font-size:20px;
 animation:subir 5s linear;
 
 }
-
 
 @keyframes subir{
 
