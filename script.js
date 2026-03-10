@@ -13,6 +13,27 @@ const sim2 = document.getElementById("sim2")
 
 let started=false
 
+let player
+
+function onYouTubeIframeAPIReady() {
+
+player = new YT.Player('player', {
+
+height: '0',
+width: '0',
+
+videoId: 'F-cO2CMue4Q',
+
+playerVars: {
+'autoplay': 0,
+'controls': 0,
+'showinfo': 0,
+'rel': 0
+}
+
+})
+
+}
 
 
 // criar estrelas animadas
@@ -41,13 +62,10 @@ started=true
 
 startBtn.style.display="none"
 
-try {
-    musica.volume = 0.7
-    musica.play()
-} catch(e){}
-    
 prep.style.display="block"
-
+    
+ player.playVideo()
+    
 preparacao()
 
 }
@@ -265,4 +283,5 @@ t += 0.2
 
 
 }
+
 
