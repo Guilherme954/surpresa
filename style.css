@@ -300,3 +300,23 @@ opacity:1;
 transform:scale(1);
 
 }
+
+#nomeAnimado{
+margin-bottom:25px;
+}
+
+#perguntaTexto{
+margin-top:0;
+}
+
+#pedidoTela{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+}
+
